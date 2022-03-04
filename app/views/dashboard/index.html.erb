@@ -1,2 +1,26 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Dashboard</h1>
+
+<div>
+    <h3>Ventas últimos 12 meses</h3>
+    <%= column_chart @sales_count_last_year %>
+</div>
+
+<div>
+    <h3>Cantidad de ventas últimos 12 meses</h3>
+    <%= column_chart @sales_quantity_last_year %>
+</div>
+
+<div>
+    <h3>Promedio ventas últimos 12 meses</h3>
+    <%= column_chart @sales_average_last_year %>
+</div>
+
+<div>
+    <h3>Ventas por origen del café</h3>
+    <%= pie_chart @sales_by_origin %>
+</div>
+
+<div>
+    <h3>Ventas por tipo de café</h3>
+    <%= pie_chart @sales_by_blend %>
+</div>
